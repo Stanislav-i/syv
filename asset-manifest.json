@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rsyv/static/css/main.7acaea2f.css",
+    "main.js": "/rsyv/static/js/main.07d3183d.js",
+    "index.html": "/rsyv/index.html",
+    "main.7acaea2f.css.map": "/rsyv/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/rsyv/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
