@@ -6,4 +6,4 @@ Functionality: car rent catalog with search car mark available. Adding cars to f
 
 Adaptive/responsive design
 
-Dark/Light
+Dark/Light theme

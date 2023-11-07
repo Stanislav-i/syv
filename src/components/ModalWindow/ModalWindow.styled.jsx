@@ -1,40 +1,47 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Backdrop = styled.div `
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: opacity 300ms linear, visibility 300ms linear;
-    z-index: 1;
-`
+export const Backdrop = styled.div`
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 300ms linear, visibility 300ms linear;
+  z-index: 1;
+`;
 
 export const Modal = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scaleY(1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
 
-    max-height: calc(100vh - 20px);
-    background: #FCFCFC;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    transition: transform 300ms linear;
-    padding: 24px;
-    overflow-y: auto;
+  max-height: calc(100vh - 20px);
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 300ms linear;
+  padding: 24px;
+  overflow-y: auto;
+  width: 100%;
 
-    @media screen and (min-width: 768px) {
-width: 500px;}
-`
+  @media screen and (min-width: 380px) {
+    width: 380px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+`;
 
 export const CloseBtn = styled.button`
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    cursor: pointer;
-`
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+`;
 
 export const Img = styled.img`
   display: block;
@@ -60,9 +67,9 @@ export const CardTitle = styled.h3`
 `;
 
 export const CardList = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 `;
 
 export const CardInfoItem = styled.span`
@@ -72,7 +79,7 @@ export const CardInfoItem = styled.span`
   font-weight: var(--fw-light);
   color: #484242;
   padding-right: 5px;
-    padding-left: 5px;
+  padding-left: 5px;
   &:not(:last-child) {
     border-right: 1px solid rgba(175, 175, 175, 0.5);
   }
@@ -82,36 +89,36 @@ export const CardInfoItem = styled.span`
 `;
 
 export const Description = styled.p`
-    padding-top: 14px;
-    color: #000;
-    font-weight: 600;
-`
+  padding-top: 14px;
+  color: #000;
+  font-weight: 600;
+`;
 export const RentalWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding-top: 8px;
-`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 8px;
+`;
 
 export const RentalDiv = styled.div`
-    padding: 7px 14px;
-    background-color: #F9F9F9;
-    color: #000;
-    border: 1px solid rgba(175, 175, 175, 0.5);
-    border-radius: 10px;
-    font-size: 12px;
-`
+  padding: 7px 14px;
+  background-color: #f9f9f9;
+  color: #000;
+  border: 1px solid rgba(175, 175, 175, 0.5);
+  border-radius: 10px;
+  font-size: 12px;
+`;
 
-export const RentBtn = styled.button`    
-    padding: 12px 50px;
-    margin-top: 1.5rem;
-    border: none;
-    border-radius: 10px;
-    color: #ffffff;
-    background-color: #3470FF;
-    cursor: pointer;
+export const RentBtn = styled.button`
+  padding: 12px 50px;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #3470ff;
+  cursor: pointer;
 
-    &:focus{
-    background-color: #0B44CD;  
-    }
-`
+  &:focus {
+    background-color: #0b44cd;
+  }
+`;

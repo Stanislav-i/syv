@@ -33,7 +33,7 @@ const MakeFilter = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if(!selectedOption) return;
+    if (!selectedOption) return;
     const userQuery = selectedOption.value;
     dispatch(setFilterValue(userQuery));
   };
@@ -41,23 +41,22 @@ const MakeFilter = () => {
   return (
     <SearchForm onSubmit={handleSubmit}>
       <SelectWrapper>
-      <Select
-        styles={{
-          control: (baseStyles, state) => ({
-            ...baseStyles,
-            borderColor: state.isFocused ? 'grey' : 'none',
-            // width: '500px'
-          }),
-          option: base => ({
-            ...base,
-            height: '100%',
-            color: 'grey',
-          }),
-        }}
-        defaultValue={selectedOption}
-        onChange={setSelectedOption}
-        options={options}
-      />
+        <Select
+          styles={{
+            control: (baseStyles, state) => ({
+              ...baseStyles,
+              borderColor: state.isFocused ? 'grey' : 'none',
+            }),
+            option: base => ({
+              ...base,
+              height: '100%',
+              color: 'grey',
+            }),
+          }}
+          defaultValue={selectedOption}
+          onChange={setSelectedOption}
+          options={options}
+        />
       </SelectWrapper>
       <Search type="submit">Search</Search>
     </SearchForm>

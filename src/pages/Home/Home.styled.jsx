@@ -35,8 +35,6 @@ export const SectionWrapper = styled.div`
 `;
 
 export const HomeImageWrapper = styled.div`
-  /* width: 200%; */
-  /* border: 2px solid green; */
 `
 export const HomeImg = styled.img`
   display: block;

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const List = styled.section`
-  /* width: 380px; */
   padding: 2rem 0;
   margin: 0 auto;
   display: grid;
@@ -23,7 +22,6 @@ export const List = styled.section`
   @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    /* padding: 2.5rem 3rem; */
   }
 `;
 
