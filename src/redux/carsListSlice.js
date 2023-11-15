@@ -19,6 +19,19 @@ export const requestCarsThunk = createAsyncThunk(
   }
 );
 
+export const requestFilteredCarsThunk = createAsyncThunk(
+  'cars/getFiltered',
+  async (make, thunkApi) => {
+    const params = new URLSearchParams([['make', `${make}`]]);
+    try {
+      const { data } = await axios.get(`/adverts`, { params });
+      return data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
+
 const initialState = {
   cars: null,
   isLoading: null,
@@ -27,7 +40,6 @@ const initialState = {
   showMoreButton: false,
   showModal: false,
   carId: null,
-  filterValue: '',
 };
 
 const carsListSlice = createSlice({
@@ -47,12 +59,10 @@ const carsListSlice = createSlice({
     setCarId: (state, action) => {
       state.carId = action.payload;
     },
-    setFilterValue: (state, action) => {
-      state.filterValue = action.payload;
-    },
   },
   extraReducers: builder =>
     builder
+      //Request default car's list
       .addCase(requestCarsThunk.pending, state => {
         state.isLoading = true;
         state.error = null;
@@ -74,6 +84,20 @@ const carsListSlice = createSlice({
       .addCase(requestCarsThunk.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+      })
+      //Request filtered car's list
+      .addCase(requestFilteredCarsThunk.pending, state => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(requestFilteredCarsThunk.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.showMoreButton = false;
+        state.cars = action.payload;
+      })
+      .addCase(requestFilteredCarsThunk.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
       }),
 });
 
@@ -84,13 +108,7 @@ export const selectCarsPage = state => state.cars.page;
 export const selectShowMoreButton = state => state.cars.showMoreButton;
 export const selectShowModal = state => state.cars.showModal;
 export const selectCarId = state => state.cars.carId;
-export const selectFilterValue = state => state.cars.filterValue;
 
-export const {
-  loadMore,
-  goToFirstPage,
-  setModalStatus,
-  setCarId,
-  setFilterValue,
-} = carsListSlice.actions;
+export const { loadMore, goToFirstPage, setModalStatus, setCarId } =
+  carsListSlice.actions;
 export const carsListReducer = carsListSlice.reducer;

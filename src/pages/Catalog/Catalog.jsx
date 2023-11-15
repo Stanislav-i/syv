@@ -3,14 +3,12 @@ import { useEffect } from 'react';
 import Loader from 'components/Loader';
 import { Container } from 'components/Container';
 import {
-  goToFirstPage,
   loadMore,
   requestCarsThunk,
   selectAllCars,
   selectCarsError,
   selectCarsIsLoading,
   selectCarsPage,
-  selectFilterValue,
   selectShowMoreButton,
 } from 'redux/carsListSlice';
 import CarCard from 'components/CarCard/CarCard';
@@ -23,7 +21,6 @@ export const CatalogPage = () => {
   const error = useSelector(selectCarsError);
   const page = useSelector(selectCarsPage);
   const showMoreButton = useSelector(selectShowMoreButton);
-  const filter = useSelector(selectFilterValue);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -44,15 +41,13 @@ export const CatalogPage = () => {
     dispatch(loadMore());
   };
   const handleGoToFirstPageBtnClick = () => {
-    dispatch(goToFirstPage());
+    window.scrollTo({ 
+      top: 0,  
+      behavior: 'smooth'
+    })
   };
 
-  const getFilteredCars = () => {
-    const normalizedFilter = filter.toLocaleLowerCase();
-    return allCars?.filter(car =>
-      car.make.toLocaleLowerCase().includes(normalizedFilter)
-    );
-  };
+
 
   const showCars = Array.isArray(allCars) && allCars.length > 0;
 
@@ -60,10 +55,10 @@ export const CatalogPage = () => {
     <Container>
       {isLoading && <Loader />}
       {error && <p>Error occured... Error is {error}</p>}
-      {showCars && <MakeFilter />}
+      <MakeFilter />  
       <List>
         {showCars &&
-          getFilteredCars().map(
+          allCars.map(
             ({
               id,
               make,
@@ -96,7 +91,7 @@ export const CatalogPage = () => {
       {!showMoreButton ? (
         <BtnDiv>
           <p>That's all vehicles we have!</p>
-          <MoreBtn onClick={handleGoToFirstPageBtnClick}>Go to start page</MoreBtn>
+          <MoreBtn onClick={handleGoToFirstPageBtnClick}>GO TOP</MoreBtn>
         </BtnDiv>
       ) : (
         <BtnDiv>

@@ -3,14 +3,15 @@ import { Container } from 'components/Container';
 import CarCard from 'components/CarCard/CarCard';
 import { List } from '../Catalog/Catalog.styled';
 import { selectFavouritesCars } from 'redux/favouritesSlice';
-import { requestCarsThunk, selectAllCars } from 'redux/carsListSlice';
+import { goToFirstPage, selectCarsPage, selectAllCars, requestCarsThunk } from 'redux/carsListSlice';
 import { useEffect } from 'react';
 import { ErrorMessage } from './Favourites.styled';
 
 export const FavouritesPage = () => {
   const favCars = useSelector(selectFavouritesCars);
-  const allCars = useSelector(selectAllCars);
+  const page = useSelector(selectCarsPage);
   const dispatch = useDispatch();
+  const allCars = useSelector(selectAllCars);
 
   useEffect(() => {
     if (allCars) {
@@ -18,6 +19,13 @@ export const FavouritesPage = () => {
     }
     dispatch(requestCarsThunk(1));
   }, [allCars, dispatch]);
+  
+  useEffect(()=>{
+    if (page === 1) {
+      return;
+    }
+    dispatch(goToFirstPage());
+  })
 
   const showCars = Array.isArray(favCars) && favCars.length > 0;
 

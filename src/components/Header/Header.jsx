@@ -7,8 +7,6 @@ import {
   Wrapper,
   Title,
   ModeSwitcher,
-  TitleCatalog,
-  TitleFav,
 } from './Header.styled';
 
 export const Header = () => {
@@ -28,11 +26,11 @@ export const Header = () => {
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title>Home</Title>
-          <TitleCatalog>Catalog</TitleCatalog>
-          <TitleFav>Favourites</TitleFav>
+          <Title to='/'>Home</Title>
+          <Title to='/catalog'>Catalog</Title>
+          <Title to='/favourites'>Favourites</Title>
           <ModeSwitcher onClick={handleChange}>
-            <span style={{ marginLeft: '0.75rem' }}>
+            <span>
               {theme === 'light' ? 'dark' : 'light'} Mode
             </span>
           </ModeSwitcher>

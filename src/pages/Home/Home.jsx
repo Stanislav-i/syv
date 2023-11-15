@@ -12,8 +12,20 @@ import {
 } from './Home.styled';
 import bgi from '../../pictures/hp-1.jpg';
 import img2 from '../../pictures/hero-bg-1.jpg';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { goToFirstPage, selectCarsPage } from 'redux/carsListSlice';
 
 export const HomePage = () => {
+  const page = useSelector(selectCarsPage);
+  const dispatch = useDispatch();
+  
+    useEffect(()=>{
+      if (page === 1) {
+        return;
+      }
+      dispatch(goToFirstPage());
+    })
   return (
     <Container>
       <TransparentLogo> S Y V</TransparentLogo>

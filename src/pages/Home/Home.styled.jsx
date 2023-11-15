@@ -15,10 +15,14 @@ export const TransparentLogo = styled.h1`
 background-image: url('${bgi}');
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-size: 200px;
+  font-size: 100px;
   text-align: center;
   font-weight: bold;
   background-size: cover;
+
+  @media (min-width: 768px) {
+      font-size: 200px;
+  }
 `;
 
 export const SectionWrapper = styled.div`
@@ -61,6 +65,7 @@ export const TitleCatalog = styled(Link).attrs({
     text-decoration: none;
     font-weight: var(--fw-bold);
     text-align: center;
+    padding-top: 25px;
 `;
 
 export const FaqText = styled.p`
