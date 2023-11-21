@@ -46,3 +46,16 @@ export const MoreBtn = styled.button`
     background-color: #0B44CD;  
     }
 `
+
+export const GoTopBtn = styled.button`
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  background-color: #8de540;
+  cursor: pointer;
+  z-index: 5;
+`

@@ -40,14 +40,6 @@ export const CatalogPage = () => {
   const handleLoadMoreBtnClick = () => {
     dispatch(loadMore());
   };
-  const handleGoToFirstPageBtnClick = () => {
-    window.scrollTo({ 
-      top: 0,  
-      behavior: 'smooth'
-    })
-  };
-
-
 
   const showCars = Array.isArray(allCars) && allCars.length > 0;
 
@@ -91,7 +83,6 @@ export const CatalogPage = () => {
       {!showMoreButton ? (
         <BtnDiv>
           <p>That's all vehicles we have!</p>
-          <MoreBtn onClick={handleGoToFirstPageBtnClick}>GO TOP</MoreBtn>
         </BtnDiv>
       ) : (
         <BtnDiv>

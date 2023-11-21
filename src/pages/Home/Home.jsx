@@ -45,7 +45,7 @@ export const HomePage = () => {
           The size of the country can be difficult to envision before arriving.
           So the best way to make the most of your visit to Ukraine is to head
           straight for the car rental desk when you arrive.
-          <TitleCatalog>Go to our CATALOG</TitleCatalog>
+          <TitleCatalog>&rarr; Go to our CATALOG</TitleCatalog>
         </SectionText>
       </SectionWrapper>
       <SectionWrapper>
@@ -58,7 +58,7 @@ export const HomePage = () => {
           maintenance and ownership behind. With various rental options and
           services available, it's a convenient way to enhance your travel
           experience and make the most of your time in different places.
-          <TitleCatalog>Go to our CATALOG</TitleCatalog>
+          <TitleCatalog>&rarr; Go to our CATALOG</TitleCatalog>
         </SectionText>
         <HomeImageWrapper>
           <HomeImg src={img2} alt="ukraine" />

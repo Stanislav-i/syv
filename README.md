@@ -15,6 +15,7 @@ Modal windows with car details and rent car function (make a call).
 Switching theme functionality
 7. Responsive Design:
 The app is responsive and works well on various devices, including desktops, tablets, and smartphones.
+8. Go top button
 
 ### Stack's used:
 
