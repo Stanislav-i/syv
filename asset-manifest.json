@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/syv/static/css/main.d303ed1e.css",
-    "main.js": "/syv/static/js/main.167f6b16.js",
-    "static/js/247.bd945e67.chunk.js": "/syv/static/js/247.bd945e67.chunk.js",
-    "static/js/604.7622d58d.chunk.js": "/syv/static/js/604.7622d58d.chunk.js",
-    "static/js/291.cad49066.chunk.js": "/syv/static/js/291.cad49066.chunk.js",
+    "main.css": "/syv/static/css/main.f4fcde27.css",
+    "main.js": "/syv/static/js/main.20878df8.js",
+    "static/js/247.19c308d7.chunk.js": "/syv/static/js/247.19c308d7.chunk.js",
+    "static/js/604.4f0917fa.chunk.js": "/syv/static/js/604.4f0917fa.chunk.js",
+    "static/js/291.fd6bfe10.chunk.js": "/syv/static/js/291.fd6bfe10.chunk.js",
     "static/js/820.2d94ecc4.chunk.js": "/syv/static/js/820.2d94ecc4.chunk.js",
     "static/js/180.9c8ba7f9.chunk.js": "/syv/static/js/180.9c8ba7f9.chunk.js",
     "static/media/hp-1.jpg": "/syv/static/media/hp-1.f6a2e4827287f57b35f8.jpg",
@@ -12,16 +12,16 @@
     "static/media/hp-img-3.jpg": "/syv/static/media/hp-img-3.6896233cf655fe834e93.jpg",
     "static/media/hero-bg-3.jpg": "/syv/static/media/hero-bg-3.cc8ed86c12c8016575d8.jpg",
     "index.html": "/syv/index.html",
-    "main.d303ed1e.css.map": "/syv/static/css/main.d303ed1e.css.map",
-    "main.167f6b16.js.map": "/syv/static/js/main.167f6b16.js.map",
-    "247.bd945e67.chunk.js.map": "/syv/static/js/247.bd945e67.chunk.js.map",
-    "604.7622d58d.chunk.js.map": "/syv/static/js/604.7622d58d.chunk.js.map",
-    "291.cad49066.chunk.js.map": "/syv/static/js/291.cad49066.chunk.js.map",
+    "main.f4fcde27.css.map": "/syv/static/css/main.f4fcde27.css.map",
+    "main.20878df8.js.map": "/syv/static/js/main.20878df8.js.map",
+    "247.19c308d7.chunk.js.map": "/syv/static/js/247.19c308d7.chunk.js.map",
+    "604.4f0917fa.chunk.js.map": "/syv/static/js/604.4f0917fa.chunk.js.map",
+    "291.fd6bfe10.chunk.js.map": "/syv/static/js/291.fd6bfe10.chunk.js.map",
     "820.2d94ecc4.chunk.js.map": "/syv/static/js/820.2d94ecc4.chunk.js.map",
     "180.9c8ba7f9.chunk.js.map": "/syv/static/js/180.9c8ba7f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d303ed1e.css",
-    "static/js/main.167f6b16.js"
+    "static/css/main.f4fcde27.css",
+    "static/js/main.20878df8.js"
   ]
 }
