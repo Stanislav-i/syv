@@ -58,7 +58,7 @@ export const CarCard = ({
           ></AiOutlineHeart>
         ) : (
           <AiFillHeart
-            color="#3470FF"
+            color="var(--primaryBtnColor)"
             onClick={handleFavHeartBtnClick}
           ></AiFillHeart>
         )}

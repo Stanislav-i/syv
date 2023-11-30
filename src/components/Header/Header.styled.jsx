@@ -32,6 +32,9 @@ export const TitleText = styled(NavLink)`
 
 export const TitleIcon = styled(NavLink)`
 cursor: pointer;
+  &.active {
+    border-bottom: 2px solid var(--primaryBtnColor);
+    };
 @media (min-width: 768px) {
     display: none;
   }

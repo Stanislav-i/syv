@@ -50,7 +50,7 @@ export const HomePage = () => {
         </SectionText>
       </SectionWrapper>
       <SectionWrapper>
-        <SectionText>
+        <SectionText className='Second'>
           Renting a car provides the flexibility to explore new destinations at
           your own pace. Whether it's a weekend getaway, a road trip adventure,
           or a business trip, renting a car offers convenience and freedom. You
@@ -59,9 +59,9 @@ export const HomePage = () => {
           maintenance and ownership behind. With various rental options and
           services available, it's a convenient way to enhance your travel
           experience and make the most of your time in different places.
-          <TitleCatalog>&rarr; Go to our CATALOG</TitleCatalog>
+          <TitleCatalog className='Second'>&rarr; Go to our CATALOG</TitleCatalog>
         </SectionText>
-        <HomeImageWrapper>
+        <HomeImageWrapper className='Second'>
           <HomeImg src={img2} alt="ukraine" />
         </HomeImageWrapper>
       </SectionWrapper>

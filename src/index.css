@@ -31,6 +31,8 @@ a {
   --fw-normal: 600;
   --fw-bold: 800;
   --radii: 0.5rem;
+  --primaryBtnColor: rgb(17, 165, 71);
+  --focusBtnColor: rgb(59, 167, 99);
 }
 
 body[data-theme='light'],
@@ -45,7 +47,7 @@ a[data-theme='light'] {
 body[data-theme='dark'],
 a[data-theme='dark'] {
   --color-text: hsl(0, 0%, 100%);
-  --color-bg: hsl(228, 27%, 30%);
+  --color-bg: hsl(175, 77%, 19%);
   --color-ui-base: hsl(209, 23%, 22%);
 
   --shadow: rgba(245, 245, 245, 0.2) 0px 0px 8px;

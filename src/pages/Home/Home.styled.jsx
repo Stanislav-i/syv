@@ -39,6 +39,14 @@ export const SectionWrapper = styled.div`
 `;
 
 export const HomeImageWrapper = styled.div`
+    &.Second {
+        display: none;
+      }
+    @media (min-width: 768px) {
+      &.Second {
+        display: block;
+      }
+  }
 `
 export const HomeImg = styled.img`
   display: block;
@@ -55,6 +63,15 @@ export const SectionText = styled.div`
     padding: 25px 0;
     display: flex;
     flex-direction: column;
+
+    &.Second {
+        display: none;
+      }
+    @media (min-width: 768px) {
+      &.Second {
+        display: block;
+      }
+  }
 `;
 
 export const TitleCatalog = styled(Link).attrs({
@@ -66,6 +83,15 @@ export const TitleCatalog = styled(Link).attrs({
     font-weight: var(--fw-bold);
     text-align: center;
     padding-top: 25px;
+
+    &.Second {
+        display: none;
+      }
+    @media (min-width: 768px) {
+      &.Second {
+        display: block;
+      }
+  }
 `;
 
 export const FaqText = styled.p`

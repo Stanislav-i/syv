@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashLoader } from 'react-spinners';
+import { MoonLoader   } from 'react-spinners';
 
 export const Loader = () => {
   return (
@@ -11,7 +11,7 @@ export const Loader = () => {
         alignItems: 'center',
       }}
     >
-      <HashLoader color="#a034a2" />
+      <MoonLoader   color="#000000" />
     </div>
   );
 };

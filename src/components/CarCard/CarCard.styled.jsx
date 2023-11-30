@@ -73,10 +73,10 @@ export const LearnBtn = styled.button`
   border: none;
   border-radius: 10px;
   color: #ffffff;
-  background-color: #3470ff;
+  background-color: var(--primaryBtnColor);
   cursor: pointer;
 
-  &:focus {
-    background-color: #0b44cd;
+  &:hover {
+    background-color: var(--focusBtnColor);
   }
 `;

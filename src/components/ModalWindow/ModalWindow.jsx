@@ -110,8 +110,8 @@ export const ModalWindow = () => {
           {rentCond.map((condition)=>{
             return (<RentalDiv key={condition}>{condition}</RentalDiv>)
           })}
-          <RentalDiv>Mileage: <span style={{color: '#3470FF', fontWeight: 'bold'}}>{carInfo.mileage.toLocaleString("en-IN")}</span></RentalDiv>
-          <RentalDiv>Price: <span style={{color: '#3470FF', fontWeight: 'bold'}}>{carInfo.rentalPrice}</span></RentalDiv>
+          <RentalDiv>Mileage: <span style={{color: 'var(--primaryBtnColor)', fontWeight: 'bold'}}>{carInfo.mileage.toLocaleString("en-IN")}</span></RentalDiv>
+          <RentalDiv>Price: <span style={{color: 'var(--primaryBtnColor)', fontWeight: 'bold'}}>{carInfo.rentalPrice}</span></RentalDiv>
           </RentalWrapper>
         </CardInfo>
         <RentBtn><a style={{color: 'white'}} href="tel:+11(000)111-11-11">Rental Car</a></RentBtn>

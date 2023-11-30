@@ -20,18 +20,18 @@ export const SelectWrapper = styled.div`
 `
 
 export const SearchBtn = styled.button`
-    padding: 14px 14px;
+    padding: 12px 14px;
     border: none;
     border-radius: 10px;
     color: #ffffff;
-    background-color: #3470FF;
+    background-color: var(--primaryBtnColor);
     cursor: pointer;
 
-    &:focus{
-    background-color: #0B44CD;  
+    &:hover{
+    background-color: var(--focusBtnColor);  
     }
 
     @media (min-width: 768px) {
-    padding: 14px 44px;
+    padding: 12px 44px;
   }
 `
