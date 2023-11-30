@@ -14,7 +14,8 @@ export const Wrapper = styled.div`
   padding: 2rem 0;
 `;
 
-export const Title = styled(NavLink)`
+export const TitleText = styled(NavLink)`
+  display: none;
   color: var(--color-text);
   font-size: var(--fv-sm);
   text-decoration: none;
@@ -23,12 +24,35 @@ export const Title = styled(NavLink)`
   &.active {
     text-decoration: underline;
     };
+    
+    @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
-export const ModeSwitcher = styled.div`
+export const TitleIcon = styled(NavLink)`
+cursor: pointer;
+@media (min-width: 768px) {
+    display: none;
+  }
+`
+
+export const ModeSwitcherText = styled.div`
+display: none;
   color: var(--color-text);
   font-size: var(--fv-sm);
   font-weight: var(--fw-bold);
   cursor: pointer;
   text-transform: capitalize;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
+
+export const ModeSwitcherIcon = styled.div`
+cursor: pointer;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`

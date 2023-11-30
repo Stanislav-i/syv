@@ -5,9 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   HeaderEl,
   Wrapper,
-  Title,
-  ModeSwitcher,
+  TitleText,
+  ModeSwitcherText,
+  TitleIcon,
+  ModeSwitcherIcon,
 } from './Header.styled';
+import { HiHome, HiViewGrid, HiHeart, HiMoon, HiOutlineSun } from 'react-icons/hi';
 
 export const Header = () => {
   const theme = useSelector(selectTheme);
@@ -26,14 +29,28 @@ export const Header = () => {
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title to='/'>Home</Title>
-          <Title to='/catalog'>Catalog</Title>
-          <Title to='/favourites'>Favourites</Title>
-          <ModeSwitcher onClick={handleChange}>
-            <span>
-              {theme === 'light' ? 'dark' : 'light'} Mode
-            </span>
-          </ModeSwitcher>
+          <TitleIcon to="/">
+            <HiHome size="16px" />
+          </TitleIcon>
+          <TitleIcon to="/catalog">
+            <HiViewGrid size="16px" />
+          </TitleIcon>
+          <TitleIcon to="/favourites">
+            <HiHeart size="16px" />
+          </TitleIcon>
+          <TitleText to="/">Home</TitleText>
+          <TitleText to="/catalog">Catalog</TitleText>
+          <TitleText to="/favourites">Favourites</TitleText>
+          <ModeSwitcherIcon  onClick={handleChange}>
+          {theme === 'light' ? (
+              <HiMoon size="16px" />
+            ) : (
+              <HiOutlineSun size="16px" />
+            )}
+          </ModeSwitcherIcon>
+          <ModeSwitcherText onClick={handleChange}>
+            <span>{theme === 'light' ? 'dark' : 'light'} Mode</span>
+          </ModeSwitcherText>
         </Wrapper>
       </Container>
     </HeaderEl>

@@ -11,7 +11,7 @@ export const SearchForm = styled.form`
 `
 export const SelectWrapper = styled.div`
     @media (min-width: 380px) {
-    width: 320px;
+    width: 220px;
   }
 
   @media (min-width: 768px) {
@@ -19,8 +19,8 @@ export const SelectWrapper = styled.div`
   }
 `
 
-export const Search = styled.button`
-    padding: 14px 44px;
+export const SearchBtn = styled.button`
+    padding: 14px 14px;
     border: none;
     border-radius: 10px;
     color: #ffffff;
@@ -30,4 +30,8 @@ export const Search = styled.button`
     &:focus{
     background-color: #0B44CD;  
     }
+
+    @media (min-width: 768px) {
+    padding: 14px 44px;
+  }
 `

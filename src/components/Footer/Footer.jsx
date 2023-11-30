@@ -6,7 +6,12 @@ const Footer = () => {
   return (
     <FooterEl>
       <Container>
-        <a href="https://www.linkedin.com/in/stanislav-izotov-dev/" target="_blank" title="Developer LinkedIn Page" rel="noreferrer">
+        <a
+          href="https://www.linkedin.com/in/stanislav-izotov-dev/"
+          target="_blank"
+          title="Developer LinkedIn Page"
+          rel="noreferrer"
+        >
           <FooterText>Developed by Stanislav Izotov 2023 &copy;</FooterText>
         </a>
       </Container>

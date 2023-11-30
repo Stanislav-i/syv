@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Select from 'react-select';
 import { goToFirstPage, requestFilteredCarsThunk} from 'redux/carsListSlice';
-import { Search, SearchForm, SelectWrapper } from './MakeFilter.styled';
+import { SearchBtn, SearchForm, SelectWrapper } from './MakeFilter.styled';
 import options from './filterData'
 
 const MakeFilter = () => {
@@ -43,7 +43,7 @@ const MakeFilter = () => {
           options={options}
         />
       </SelectWrapper>
-      <Search type="submit">Search</Search>
+      <SearchBtn type="submit">Search</SearchBtn>
     </SearchForm>
   );
 };
