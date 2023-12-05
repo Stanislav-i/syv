@@ -57,5 +57,5 @@ export const GoTopBtn = styled.button`
   border-radius: 50%;
   background-color: #8de540;
   cursor: pointer;
-  z-index: 5;
+  z-index: 2;
 `

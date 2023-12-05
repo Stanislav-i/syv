@@ -8,7 +8,7 @@ export const Backdrop = styled.div`
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   transition: opacity 300ms linear, visibility 300ms linear;
-  z-index: 1;
+  z-index: 3;
 `;
 
 export const Modal = styled.div`
